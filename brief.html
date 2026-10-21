@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Care Brief</title>
+<meta name="description" content="One-page product brief behind the Daily Care concept for Dario Health members: evidence, roadmap, user stories and metrics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f5;--surface:#fff;--ink:#18212b;--ink-2:#4a5664;--ink-3:#7a8796;--line:#e2e7ee;--accent:#1f6f78;--accent-2:#e3f1f2;--warn:#b4561b;--warn-2:#fdf0e6;--ok:#2c7a4b;--ok-2:#e5f4ea;--md:#6b3fa0;--md-2:#f1e9fb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:26px;line-height:1.25;margin:6px 0 6px}
+.sub{color:var(--ink-2);font-size:14px}
+.back{font-size:13px;color:var(--accent);font-weight:600;text-decoration:none;border:1px solid var(--accent);padding:7px 12px;border-radius:999px;white-space:nowrap}
+section{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:16px}
+h2{font-size:17px;margin-bottom:10px}
+h3{font-size:14px;margin:14px 0 6px}
+p,li{color:var(--ink-2);font-size:14.5px}
+ul,ol{padding-left:20px}
+li{margin:4px 0}
+.tl{background:var(--accent-2);border-color:#c6e2e4}
+.tl p{color:var(--ink);font-size:15.5px}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+td b{color:var(--ink)}
+.ph{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px}
+.now{background:var(--warn-2);color:var(--warn)}.next{background:var(--md-2);color:var(--md)}.later{background:#e8eefc;color:#2f4fa8}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.col{border:1px solid var(--line);border-radius:12px;padding:14px}
+.col h3{margin-top:0}
+.story{border-left:3px solid var(--accent);padding:4px 0 4px 14px;margin-top:12px}
+.story .as{color:var(--ink);font-weight:500}
+.ac li{font-size:13.5px}
+.q{font-style:italic}
+.foot{font-size:12px;color:var(--ink-3);margin-top:18px}
+@media (max-width:720px){.grid3{grid-template-columns:1fr} h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Product brief · concept</div>
+      <h1>Daily Care: keep members engaged by fixing the basics first, then using what only Dario has</h1>
+      <div class="sub">Gurleen Kaur · 22 Oct 2026 · independent concept, not affiliated with DarioHealth · prototype uses dummy data</div>
+    </div>
+    <a class="back" href="index.html">← Open the prototype</a>
+  </div>
+
+  <section class="tl">
+    <h2>In one paragraph</h2>
+    <p>Dario is paid per engaged member per month, so anything that stops a member using the app is lost revenue. Recent Google Play reviews of the Dario Health and Dario Mind apps point mostly to basics, not missing features: test strips running out with no way to reorder in the app, meters that won't fit or connect, unclear billing, support that doesn't reply, and activities that don't load. My proposal: fix those <b>now</b> through a supplies and support hub. <b>Next</b>, build the thing specialist competitors can't: insights that link a member's stress check-ins (Mind) to their blood pressure or glucose readings, inside one daily plan.</p>
+  </section>
+
+  <section>
+    <h2>What I looked at</h2>
+    <ul>
+      <li><b>Member voice:</b> about 40 Google Play reviews shown first for Dario Health (4.3★, 5.3K reviews) and Dario Mind (3.8★, 688 reviews), read on 22 Oct 2026. Dario Move had no reviews to read. This is a sample, not a survey.</li>
+      <li><b>Dario's own materials:</b> store listings, press releases (DarioIQ, Twill integration, GLP-1 program) and investor decks.</li>
+      <li><b>Competitors (public sources):</b> Omada, Livongo/Teladoc, Virta (cardiometabolic); Hinge Health, Sword (MSK); Headspace, Lyra, Spring Health (behavioural).</li>
+      <li><b>Not seen:</b> the inside of the apps behind an employer login, Dario's analytics, or its roadmap. Some "gaps" below may already be solved.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What members say (recurring themes)</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Theme</th><th>App</th><th>Example phrase from a review</th><th>Why it matters</th></tr>
+      <tr><td><b>Running out of strips</b></td><td>Dario Health</td><td class="q">"down to my last strip"</td><td>No strips means no readings, so the app has nothing to work with</td></tr>
+      <tr><td><b>Meter fit and phone compatibility</b></td><td>Dario Health</td><td>Had to cut a phone case to fit the meter; new phone not supported</td><td>The device is the entry point to the whole program</td></tr>
+      <tr><td><b>Billing and cancellation</b></td><td>Dario Health</td><td class="q">"no options to cancel subscriptions"</td><td>Trust; chargebacks; complaints</td></tr>
+      <tr><td><b>Support doesn't reply</b></td><td>Dario Health</td><td class="q">"they do not answer emails"</td><td>Small problems turn into drop-outs</td></tr>
+      <tr><td><b>Freezing and errors</b></td><td>Both</td><td class="q">"keeps stalling and freezing"</td><td>Reliability before features</td></tr>
+      <tr><td><b>Activities don't load; login loops</b></td><td>Dario Mind</td><td class="q">"loading forever"</td><td>For a mental health app, failure adds stress</td></tr>
+      <tr><td><b>Too much pushed content</b></td><td>Dario Health</td><td>App feels "too busy"; many daily notifications</td><td>Members mute or delete the app</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Roadmap</h2>
+    <div class="grid3">
+      <div class="col"><span class="ph now">Now</span><h3>Fix what makes members leave</h3>
+        <ul><li>Strip counter, low-strip alert, order now with tracking</li><li>Automatic delivery based on usage (fixed 30/60/90 days optional); card only for members who pay directly, with a reminder before each charge</li><li>Guided meter troubleshooting and phone compatibility check</li><li>History viewable without the meter</li><li>Support chat with request status; plan page with self-serve cancel</li><li>Missed-readings check-in: after 3 days without a reading, ask why and route to the fix</li><li>Dario Mind stability and sign-up fixes (engineering and QA)</li></ul></div>
+      <div class="col"><span class="ph next">Next</span><h3>Use what only Dario has</h3>
+        <ul><li>Mind + body insights: BP or glucose on high- vs low-stress days, with a 2-minute exercise</li><li>One "Today" plan across programs: a shared view of today's tasks in the main app, linking out to Move and Mind. The separate apps stay; merging them is Dario's call</li><li>Member-controlled reminder budget, with DarioIQ choosing what's worth sending</li><li>Family & caregivers: the member invites someone and chooses what they see (alerts, missed readings, weekly summary, supplies); Mind data private by default. Extends the existing hypo alert to emergency contacts</li></ul></div>
+      <div class="col"><span class="ph later">Later</span><h3>Expand and prove value</h3>
+        <ul><li>GLP-1 companion: side effects, protein and hydration, strength exercises from Move, an off-ramp plan</li><li>Employer view of engagement and outcomes</li><li>AI companion with clinical escalation</li><li>Google Health Connect sync</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why this order</h2>
+    <p>Impact and effort below are my estimates from outside, to be replaced with Dario's data (tickets, churn reasons, engineering sizing).</p>
+    <div class="tablewrap"><table>
+      <tr><th>Item</th><th>Impact on engagement</th><th>Effort (my guess)</th><th>Evidence</th><th>Phase</th></tr>
+      <tr><td><b>Strip reorder, automatic delivery, tracking</b></td><td>High: no strips, no readings</td><td>Low–medium: fulfilment exists</td><td>Reviews; Livongo includes unlimited strips</td><td><span class="ph now">Now</span></td></tr>
+      <tr><td><b>Troubleshooting and compatibility</b></td><td>High for new members</td><td>Low (content) to medium (device)</td><td>Reviews</td><td><span class="ph now">Now</span></td></tr>
+      <tr><td><b>Support chat and plan page</b></td><td>Medium–high</td><td>Medium: support tooling</td><td>Reviews</td><td><span class="ph now">Now</span></td></tr>
+      <tr><td><b>Missed-readings check-in</b></td><td>High: catches members as they drift, and tells Dario why</td><td>Low: one prompt routing to existing fixes</td><td>My proposal; links the engagement drop to the causes in reviews</td><td><span class="ph now">Now</span></td></tr>
+      <tr><td><b>Mind stability</b></td><td>High for Mind members</td><td>Unknown: needs engineering view</td><td>Reviews, 2022–2026</td><td><span class="ph now">Now</span></td></tr>
+      <tr><td><b>Mind + body insights</b></td><td>High, and differentiating</td><td>Medium: data exists in two programs; clinical review needed</td><td>No competitor found doing it</td><td><span class="ph next">Next</span></td></tr>
+      <tr><td><b>One daily plan</b></td><td>Medium–high for multi-condition members</td><td>Medium if it links out to existing apps; high if apps are merged</td><td>Six DarioHealth apps listed on Google Play</td><td><span class="ph next">Next</span></td></tr>
+      <tr><td><b>Family & caregivers</b></td><td>Medium–high for older members and those with hypo risk</td><td>Medium: invites, permissions, privacy and consent review</td><td>Dario's hypo alert already texts emergency contacts</td><td><span class="ph next">Next</span></td></tr>
+      <tr><td><b>GLP-1 companion</b></td><td>High, growing segment</td><td>High: clinical and regulatory</td><td>Dario GLP-1 program (Jul 2026); Virta off-ramp</td><td><span class="ph later">Later</span></td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Two user stories with acceptance criteria</h2>
+    <div class="story">
+      <div class="as">As a member who checks glucose daily, I want the app to warn me before I run out of strips and let me reorder in one tap, so that I never miss a reading.</div>
+      <ol class="ac">
+        <li>Given each synced reading, when it is saved, then the strip count goes down by one; the member can correct the count manually.</li>
+        <li>Given strips left cover 7 days or fewer at the member's 14-day average, when they open the app, then a banner shows strips left and the estimated run-out date.</li>
+        <li>Given the member taps Reorder and confirms, then the order is placed, the banner changes to "on the way", and status with a tracking number shows in the app.</li>
+        <li>Given automatic delivery is set to "when I'm running low", when strips left fall to the reorder point (average daily use × delivery lead time to the member's address + safety buffer of 3 days), then an order is created; given a fixed 30, 60 or 90-day schedule, the order ships lead-time days before the due date. The member can order earlier at any time.</li>
+        <li>Given a manual order, when standard delivery would arrive after the estimated run-out date, then the order is upgraded to express automatically at no extra cost to the member and the app shows the arrival date; otherwise standard delivery is used, and the member is not asked to choose. Given tracking shows a delay past the run-out date, then the member is told and offered a replacement shipment.</li>
+        <li>Given an automatic order is due, then 3 days before, the member gets one notification with the ship date, quantity and either "covered by your plan" or the amount and card ending; they can confirm, skip, or change it from the notification.</li>
+        <li>Given the member's strips are covered by their plan, then no payment method is requested or shown.</li>
+        <li>Given automatic delivery is on, then the member can skip the next order, pause, or turn it off in the app in two taps or fewer, with no phone call.</li>
+        <li>Given delivery is confirmed, then the strip count increases by the quantity delivered.</li>
+      </ol>
+      <p style="margin-top:8px;font-size:13.5px"><b>Why usage-based rather than a fixed weekly or monthly subscription:</b> testing frequency changes with illness, medicines and doctor advice, so a fixed date over- or under-supplies (one review describes receiving two shipments), and the app already knows how many strips are used. Weekly boxes also cost more to ship. The trigger is a reorder point (demand during delivery lead time plus safety stock), the same logic used in supply chain planning, applied to one member. Open questions: actual delivery times by region, the cost of free express, plan limits on strips per month, and how fulfilment and billing work today.</p>
+    </div>
+    <div class="story">
+      <div class="as">As a member in both the blood pressure and Mind programs, I want to see whether my stress relates to my BP readings, so that I understand what affects my numbers and what I can do about it.</div>
+      <ol class="ac">
+        <li>Given at least 10 days in the last 14 with both a BP reading and a stress check-in, then the insight is available; otherwise it is not shown.</li>
+        <li>The insight compares average systolic BP on high-stress days (4–5) with other days, and appears only when the difference is above a threshold set with the clinical team.</li>
+        <li>Wording says it is a pattern in the member's own data, not a diagnosis, and gives no medication advice; copy is approved by the clinical team before release.</li>
+        <li>The member can start a 2-minute exercise, share the insight with their coach, or hide insights of this type.</li>
+        <li>Given high stress on 5 or more of the last 14 days, then a "talk to someone" option shows coaching and care options plus crisis resources.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I'd measure it</h2>
+    <ul>
+      <li><b>North star:</b> engaged members per month as a % of enrolled members (the unit Dario is paid on).</li>
+      <li><b>Now:</b> strip run-out events per 100 glucose members a month; % of boxes arriving before run-out;% of glucose members on automatic delivery; % of reorders placed in-app; overstock (boxes shipped while 14+ days of strips are left); support tickets per 1,000 members and median first reply; 30- and 90-day retention of new members; missed-readings check-in answer rate and % active again within 7 days, by reason.</li>
+      <li><b>Next:</b> % of eligible members who view an insight and complete the exercise; % of members active in 2 or more programs; daily plan completion; % of members who add a caregiver, and their 90-day retention compared with members who don't.</li>
+      <li><b>Guardrails:</b> automatic delivery skip and turn-off rate; billing complaints per 1,000 members; notification opt-out rate; crash-free sessions; "hide insight" rate.</li>
+      <li><b>How to test:</b> roll out the Now items to one client cohort first; A/B test the insight card against no card for eligible members over 8 weeks, measuring 30-day engagement.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Questions I'd want answered</h2>
+    <ul>
+      <li>Which of these are already solved or in progress inside the apps (the employer-login experience may differ from what reviews describe)?</li>
+      <li>What are the top reasons members disengage in Dario's own data, and do they match the reviews?</li>
+      <li>Is the direction to bring the six apps into one experience?</li>
+      <li>How does DarioIQ decide which intervention to send, and could the insight be one of its interventions?</li>
+      <li>What do employer and health plan clients see today about engagement and outcomes?</li>
+    </ul>
+  </section>
+
+  <p class="foot">Sources: Google Play listings and reviews for Dario Health, Dario Mind (Twill) and Dario Move (read 22 Oct 2026); DarioHealth press releases and investor decks (2025–2026); public pages and press releases from Omada, Teladoc/Livongo benefit-plan materials, Virta, Hinge Health, Sword, Headspace, Lyra and Spring Health. Competitor features are from public sources and may have changed. Review phrases are short excerpts, without names.</p>
+</div>
+</body>
+</html>
