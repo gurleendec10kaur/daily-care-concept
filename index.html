@@ -182,7 +182,6 @@ body.rm .phone.spotting [data-phase]:not(.spot)::after{opacity:0}
 .np-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .notes h2{font-size:19px;margin:2px 0 6px;line-height:1.25}
 .notes h4{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin:0 0 6px}
-.rmswitch{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--ink-2);white-space:nowrap;padding-top:2px}
 .legendrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);margin-bottom:14px}
 .legendrow .gap{width:8px}
 .lg{font-size:10px;font-weight:800;letter-spacing:.06em;color:#fff;padding:2px 8px;border-radius:99px}
@@ -541,12 +540,11 @@ let tasks=[false,false,false,false], strips=7, orderStage=-1, stress=0, nudge='F
 const $=id=>document.getElementById(id);
 
 function renderNotes(key){
-  const n=NOTES[key], rm=document.body.classList.contains('rm');
+  const n=NOTES[key];
   const flow=n.flow.map((t,i)=>`<div class="fl fl${i}"><div class="flhead"><span class="flico">${ic(['alert','layers','target'][i],15)}</span><span class="fllab">${['Problem','We build','We measure'][i]}</span></div><div class="fltxt">${t}</div></div>`).join('<span class="flarrow">→</span>');
   const feats=n.features.map(f=>{const F=FEAT[f];return `<button class="feat" style="--phc:var(--${F.p})" title="${F.d}" onmouseenter="hov('${f}',1)" onmouseleave="hov('${f}',0)" onclick="spot('${f}')">${ic(F.i,15)}${F.n}</button>`;}).join('');
   $('notesBody').innerHTML=`
-  <div class="np-top"><div><div class="eyebrow">Why this screen</div><h2>${n.title}</h2></div>
-    <button class="rmswitch" onclick="toggleRm()"><span class="toggle ${rm?'on':''}"></span>Colour the app</button></div>
+  <div class="np-top"><div><div class="eyebrow">Why this screen</div><h2>${n.title}</h2></div></div>
   <div class="legendrow"><span class="lg now">NOW</span>fixes why members leave<span class="gap"></span><span class="lg next">NEXT</span>what only Dario can do</div>
   <div class="flow3">${flow}</div>
   <div class="np-grid">
@@ -603,7 +601,6 @@ function spot(f){
   pinned=true; spotTimer=setTimeout(clearSpot,2500);
 }
 document.addEventListener('click',e=>{ if(e.target.closest('.phone')) clearSpot(); });
-function toggleRm(){ document.body.classList.toggle('rm'); renderNotes(cur); renderDelivery(); }
 function go(tab){
   clearSpot(); cur=tab;
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
